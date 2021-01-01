@@ -1,0 +1,235 @@
+.about {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  color: $primary-color;
+  background: linear-gradient(to bottom, rgba($text-color, 0.7), rgba($text-color, 0.5)), url("/images/about-hero-bg.jpg") center top;
+  background-size: cover;
+  z-index: 0;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    padding: 12em 10em 0 10em;
+    justify-content: center;
+    align-items: center;
+    transform-origin: left 2s linear 2s;
+  }
+  &__h1 {
+    font-size: 3rem;
+    padding-bottom: 0.2em;
+  }
+
+  &__h3 {
+    font-size: 1.2em;
+    width: 40%;
+    height: auto;
+    margin-bottom: 1em;
+  }
+}
+
+.about-container {
+  position: relative;
+  background-color: $primary-color;
+  width: 100vw;
+  
+  & .line {
+    position: absolute;
+    width: 5em;
+    height: .5em;
+    background-color: $secondary-color;
+    z-index: -1;
+    left: 10em;
+    top: 20em;
+  }
+
+  & .grid1 {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 15em 1fr 2fr;
+    grid-template-areas: 
+    "box1 img-box1 box2";
+    padding: 7em 10em 0em 10em;
+    gap: 5em;
+  
+    & .text-box1 {
+      grid-area: box1;
+      padding-top: 7em;
+      z-index: 10;
+    }
+    
+    & .text-box2 {
+      grid-area: box2;
+      padding-top: 10em;
+      min-width: 10em;
+    }
+    
+    & .img-box1 {
+      grid-area: img-box1;
+      width: auto;
+      max-height: 30em;
+      object-fit: contain;
+    }
+  }
+
+  & .grid2 {
+    display: grid;  
+    grid-template-rows: 2;
+    width: 100vw;
+    height: 40em;
+  
+  & .quote-box1 {
+    text-align: center;
+    background-color: rgba($text-color, 0.2);
+    margin: 5em 0;
+    padding: 2em 10em;
+    font-weight: map-get($font-weights, bold);
+
+    & .quote1 {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10em;
+      color: rgba(85, 83, 83, 0.8);
+    }
+    
+    & .quote-h3 {
+      padding-top: 5em;
+    }
+
+    & .line1 {
+      position: absolute;
+      width: 5em;
+      height: .2em;
+      background-color: $secondary-color;
+      margin-top: 6em;
+      left: 50% - 2.7%;
+  }
+  }
+
+  & .quote-box2 {
+    text-align: center;
+    margin: auto;
+    height: 2em;
+    width: 40em;
+  }
+  }
+
+  & .grid3 {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5em;
+    padding: 0 10em 7em 10em;
+    margin-top: 7em;
+
+    & .text-box3 {
+    padding-top: 5em;
+    }
+    
+    & img {
+      width: 35em;
+      height: auto;
+    }
+
+    & button {
+      color: black; 
+    }
+  }
+
+}
+
+@media (max-width: 1160px) {
+  .about-container .grid1 {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .about-container .img-box1 {
+    height: 22em;
+  }
+  .about-container .grid3 img {
+    max-width: 25em;
+  }
+  .about-container .grid3 .text-box3 {
+    padding-top: 0;
+    width: 10em;
+    }
+}
+@media (max-width: 999px) {
+section.about .about__text {
+  padding: 10em 2em;
+}
+.about .about__h3 {
+  width: 70%;
+}
+}
+@media (max-width: 699px) {
+  
+  main.about-container .grid1 {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    padding: 0 1em;
+    margin: 0 auto;
+
+    & .text-box1 {
+      padding-top: 0;
+    }
+
+    & .img-box1 {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  main.about-container .grid2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 8em 0;
+
+    & .quote-box1 {
+      margin: 5em 0;
+      padding: 2em;
+
+    & .line1 {
+      left: 40%;
+    }
+    }
+
+    & .quote-box2 {
+      height: 2em;
+      width: auto;
+    }
+  }
+
+  main.about-container .grid3 {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    padding: 0 1em;
+    margin: 0 auto;
+
+    & .text-box3 {
+      width: auto;
+      height: auto;
+      padding: 2em;
+    }
+    
+    & img {
+      object-fit: contain;
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+      padding-right: 2em;
+    }
+
+    & button {
+      color: black; 
+    }
+  }
+}

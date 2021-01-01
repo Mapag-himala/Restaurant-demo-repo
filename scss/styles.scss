@@ -1,0 +1,350 @@
+@import "config", "menu", "home","reservation", "about", "contact";
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  transition: all .7s ease;
+
+  &.open {
+    color: white;
+  }
+  
+  & .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 0.5em 15em .5em 13em;
+    font-weight: map-get($font-weights, bold);
+  
+    
+    & a {
+      color: $primary-color;
+      padding-top: 1em;
+    }
+
+    & a:hover {
+      color: $secondary-color;
+      transform: scale(1.05);
+    }
+  }
+
+  & .menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 3em;
+    height: 3em;
+    top: 1em;
+    right: 2em;
+    transition: all .3s ease-in-out;
+
+    &__burger {
+      position: absolute;
+      min-width: 100%;
+      width: 3em;
+      height: .3em;
+      background-color: transparent;
+      border-radius: 5px;
+      transition: all .3s ease-in-out;
+    }
+
+    &__burger1 {
+      position: absolute;
+      min-width: 100%;
+      width: 3em;
+      height: .3em;
+      background-color: transparent;
+      border-radius: 5px;
+      transition: all .3s ease-in-out;
+      transform: translateY(-1em);
+    }
+    &__burger2 {
+      position: absolute;
+      min-width: 100%;
+      width: 3em;
+      height: .3em;
+      background-color: transparent;
+      border-radius: 5px;
+      transition: all .3s ease-in-out;
+      transform: translateY(1em);
+    }
+    &.open .menu-btn__burger {
+      transform: translateX(-50px);
+      visibility: hidden;
+      transition: all .3s ease-in-out;
+    }
+    &.open .menu-btn__burger1 {
+      transform: rotate(45deg) translate(5px, -5px);
+      transition: all .3s ease-in-out;
+    }
+    &.open .menu-btn__burger2 {
+      transform: rotate(-45deg) translate(5px, 5px);
+      transition: all .3s ease-in-out;
+    }
+  }
+}
+
+.nav-logo {
+  font-size: 2rem;
+  padding-right: 0.5em;
+  color: $secondary-color !important;
+  text-shadow: 0.5px 0.5px 0px black;
+  padding-top: 0 !important;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+header.nav-scrolled {
+  background-color: $primary-color;
+  & a {
+    color: $text-color;
+  }
+
+  & .nav-logo {
+    color: $secondary-color;
+  }
+  
+  & .nav-active {
+    color: $secondary-color;
+  }
+}
+
+header.s-nav-scrolled {
+  background-color: $primary-color;
+  & a {
+    color: $text-color;
+  }
+  & .nav-active {
+    color: $secondary-color;
+  }
+}
+
+
+.btn {
+  color: $text-color;
+  font-weight: map-get($font-weights, bold);
+  margin-top: 3em;
+  background-color: $secondary-color;
+  padding: .6rem 1.3rem;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn:hover {
+  color: $text-color;
+  background-color: #fff;
+}
+
+main {
+  overflow: hidden;
+  background: transparent;
+  background-image: none;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  z-index: 2;
+
+  .address {
+    color: #fff;
+    position: absolute;
+    right: 2em;
+    bottom: 4em;
+    opacity: 0.8;
+    transition: .2s;
+
+    &:hover {
+      color: $secondary-color;
+      cursor: pointer;
+    }
+  }
+}
+
+.main-social-icons {
+  display: flex;
+  position: absolute;
+  bottom: 4em;
+  left: 1em;
+  transition: .3s;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #fbff03, #ff5f02);
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 0.5rem;
+    transition: 0.3s;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.05);
+  }
+
+
+//footer//
+
+.footer {
+  position: absolute;
+  background-color: black;
+  height: auto;
+  width: 100%;
+  font-size: 1.2rem;
+  color: rgb(119, 119, 119);
+  
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 4em 0 4em 12em;
+
+  }
+
+  &__about {
+    margin-right: 1.5em;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8rem;
+  }
+
+  &__time {
+    line-height: 1.5rem;
+  }
+
+  & a {
+    font-weight: map-get($font-weights, normal);
+    text-decoration: none;
+    color: grey;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  & h4 {
+    color: $secondary-color;
+  }
+}
+
+#map {
+  height: 23em;
+  width: 100vw;
+  z-index: 5;
+}
+
+// footer //
+
+@media (max-width: 1024px) {
+.footer__container {
+  padding: 4em 0 4em 6em;
+}
+.footer__about {
+  margin-right: 0;
+  line-height: 1.5em;
+}
+
+.footer__contact {
+  margin: 0 1em;
+  line-height: 1.8em;
+}
+
+.footer__time {
+  line-height: 1.5em;
+}
+
+}
+
+@media (max-width: 799px) {
+  .footer__container {
+    padding-left: 2em;
+  }
+
+  .main-map {
+    margin-top: 20em;
+  } 
+}
+
+@media (max-width: 699px) {
+  .footer .footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .footer .footer__contact {
+    width: 100%;
+    margin-top: 2em;
+  }
+  .footer .footer__time {
+    width: 100%;
+    margin-top: 2em;
+  }
+}
+  
+// burger-menu //
+
+@media (max-width: 999px) {
+  .menu-btn {
+    cursor: pointer;
+  }
+  .menu-btn .menu-btn__burger,
+  .menu-btn .menu-btn__burger1,
+  .menu-btn .menu-btn__burger2 {
+    background-color: white;
+  }
+  .scrolled-burger{
+    background-color: black !important;
+  }
+
+  #main-nav .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 1em;
+    & .nav-items {
+     display: none;
+     transform: translateY(-999px, 0);
+     transition: all .3s ease-in-out;
+     opacity: 0;
+    }
+    & .nav-items.nav-open {
+      height: auto;
+      display: flex;
+      transform: translateY(20px);
+      transition: all .3s ease-in-out;
+      opacity: 1;
+      padding-bottom: 1em;
+    }
+    }
+
+  #main-nav .nav :nth-child(1),
+  #main-nav .nav :nth-child(2),
+  #main-nav .nav :nth-child(4),
+  #main-nav .nav :nth-child(5), {
+    order: 2;
+  }
+  #main-nav .nav :nth-child(3) { 
+    order: 1;
+    visibility: visible !important;
+  }
+}

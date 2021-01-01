@@ -1,0 +1,38 @@
+$primary-color: #fff;
+$secondary-color: #fffb00;
+$text-color: #2c2c2c;
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  font-family: "Segoe UI", sans-serif, serif;
+}
+
+
+.link-style-light {
+  text-decoration: none;
+  color: rgba($primary-color, .9);
+
+  &:hover {
+    color: $secondary-color;
+    transform: scale(1.05) !important;
+  }
+}
+
+.link-style-dark {
+  text-decoration: none;
+  font-weight: map-get($font-weights, medium);
+  color: rgba($text-color, .9);
+
+  &:hover {
+    color: rgba(gold, .9);
+    transform: scale(1.05);
+  }
+}

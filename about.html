@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs1AGrOp1UxJiONjn823UOX8HOI_FPq7o&callback=initMap&libraries=&v=weekly" defer></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Ristorante La Luna</title>
+  </head>
+
+  <body>
+    <header id="main-nav">
+      <nav class="nav">
+        <a href="About.html" class="nav-items">ABOUT US</a>
+        <a href="reservation.html" class="nav-items">RESERVATION</a>
+        <a href="index.html" class="nav-logo"><em>LA LUNA</em></a>
+        <a href="menu.html" class="nav-items">MENU</a>
+        <a href="contact.html" class="nav-items">CONTACT</a>
+      </nav>
+
+      <div class="menu-btn">
+        <div class="menu-btn__burger1"></div>
+        <div class="menu-btn__burger"></div>
+        <div class="menu-btn__burger2"></div>
+      </div>
+      
+    </header>
+
+    <section class="about rellax">
+      <div class="about__text rellax">
+        <h1 class="about__h1">ABOUT US</h1>
+        <h3 class="about__h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum cum voluptatibus voluptas iusto nulla ad sapiente fuga sequi dicta. Eos.</h3>
+      </div>
+    </section>
+
+    <main class="about-container">
+      
+      <div class="grid1">
+
+        <p class='text-box1'>ipsum, dolor sit amet consectetur adipisicing elit. Excepturi praesentium adipisci repellendus! Lorem ipsum dolor sit amet.
+        </p>
+          <span class="line rellax" data-rellax-percentage="2"></span>
+        
+        <img src="/images/front-about.jpg" alt="employee-images"  class="img-box1"/>
+
+        <div class="text-box2 rellax">
+          
+          <h3>We like having fun too!</h3>
+          
+          <p>Crack a joke or two. We'll laugh anyways. We have too. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quo laboriosam ipsa tenetur aut deleniti culpa consequuntur asperiores corrupti fugiat.
+        </p>
+        </div>
+      </div>
+      
+      <div class="grid2">
+      <div class="quote-box1">
+        <h3 class="quote-h3">
+          “This lamb is so undercooked, it’s following Mary to school!”
+        </h3>
+          <span class='line1'></span>
+          <p class='quote1'>Douglas McArthur</p>
+      </div>
+
+        <div class="quote-box2">
+          <h3>Behind the scenes</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt neque animi fuga eligendi quas suscipit architecto nesciunt veritatis, aperiam at.</p>
+        </div>
+      </div>
+      
+
+      <div class="grid3">
+        <div class="text-box3">
+          <h3>We like having fun too!</h3>
+          <p></p>Crack a joke or two. We'll laugh anyways. We have too. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quo laboriosam ipsa tenetur aut deleniti culpa consequuntur asperiores corrupti fugiat.
+        </p>
+        <a href="contact.html"><button type="button" class="btn btn-warning">CONTACT US</button></a>
+        </div>
+
+      <img src="/images/behind-about.jpg" alt="employee-images" class="image-box2 rellax" data-rellax-percentage="-2"/>
+    
+    </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__about">
+          <h4>ABOUT US</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatibus laudantium totam dignissimos perspiciatis</p>
+        </div>
+
+        <div class="footer__contact">
+          <h4>CONTACT INFO</h4>
+          <a href="reservation.html"><i class="fas fa-map-marked-alt"> 138 Bakerland Street, Night City, California</i></a>
+
+          <a href="reservation.html"><i class="fas fa-phone"> +0 123 456 9101</i></a>
+
+          <a href="mailto:camarines.kurt@gmail.com"><i class="fas fa-envelope"></i> camarines.kurt@gmail.com</a>
+        </div>
+
+        <div class="footer__time">
+          <h4>OPENING HOURS</h4>
+          <h5>MONDAY-THURSDAY</h5>
+          <p>10:00 AM - 11:00 PM</p>
+          <h5>FRIDAY-SATURDAY</h5>
+          <p>10:00 AM - 3:00 AM</p>
+        </div>
+      </div>
+      <div class="footer__copyright">&copy;2020 La Luna. All rights reserved.</div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/e495d70092.js" crossorigin="anonymous"></script>
+    <script src="/node_modules/rellax/rellax.js"></script>
+    <script src="/js/script.js"></script>
+    <script>
+      var rellax = new Rellax(".rellax", {
+        center: true,
+      });
+    </script>
+  </body>
+</html>
